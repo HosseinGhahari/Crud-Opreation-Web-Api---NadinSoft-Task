@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Crud_Application\Crud_Application.csproj" />
+    <ProjectReference Include="..\Crud_Application_Contracts\Crud_Application_Contracts.csproj" />
+    <ProjectReference Include="..\Crud_Domain\Crud_Domain.csproj" />
+    <ProjectReference Include="..\Crud_Infrastructure\Crud_Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Crud_Domain/1.0.0": {
+        "dependencies": {
+          "Crud_Application_Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Crud_Domain.dll": {}
+        }
+      },
+      "Crud_Application_Contracts/1.0.0": {
+        "runtime": {
+          "Crud_Application_Contracts.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Crud_Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Crud_Application_Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

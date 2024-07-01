@@ -1,0 +1,15 @@
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\obj\Debug\net7.0\Crud_Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\obj\Debug\net7.0\Crud_Domain.AssemblyInfoInputs.cache
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\obj\Debug\net7.0\Crud_Domain.AssemblyInfo.cs
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\obj\Debug\net7.0\Crud_Domain.csproj.CoreCompileInputs.cache
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\bin\Debug\net7.0\Crud_Domain.deps.json
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\bin\Debug\net7.0\Crud_Domain.dll
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\bin\Debug\net7.0\Crud_Domain.pdb
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\bin\Debug\net7.0\Crud_Application_Contracts.dll
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\bin\Debug\net7.0\Crud_Application_Contracts.pdb
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\obj\Debug\net7.0\Crud_Domain.csproj.AssemblyReference.cache
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\obj\Debug\net7.0\Crud_Domain.csproj.CopyComplete
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\obj\Debug\net7.0\Crud_Domain.dll
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\obj\Debug\net7.0\refint\Crud_Domain.dll
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\obj\Debug\net7.0\Crud_Domain.pdb
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Domain\obj\Debug\net7.0\ref\Crud_Domain.dll
