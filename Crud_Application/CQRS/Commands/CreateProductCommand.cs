@@ -2,28 +2,23 @@
 using MediatR;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Crud_Application.CQRS.Commands
+namespace Crud_Application_Contracts.CQRS.Commands
 {
-    public class CreateProductCommand 
+    public class CreateProductCommand
     {
         public class Command : IRequest<Response>
         {
-            [Required]
             public string Name { get; set; }
-            [Required]
             public DateTime ProduceDate { get; set; }
-            [Required]
             public int ManufacturePhone { get; set; }
-            [Required]
             public string ManufactureEmail { get; set; }
-            [Required]
             public bool IsAvailable { get; set; }
         }
+
 
         public class Handler : IRequestHandler<Command, Response>
         {
@@ -40,7 +35,7 @@ namespace Crud_Application.CQRS.Commands
                     request.ProduceDate,
                     request.ManufacturePhone,
                     request.ManufactureEmail,
-                    request.IsAvailable
+                    request.IsAvailable                 
                 );
 
                 await _productRepository.CreateProductAsync(product);
@@ -50,7 +45,7 @@ namespace Crud_Application.CQRS.Commands
                     Id = product.Id,
                 };
 
-                return response;
+                return response; 
             }
         }
 
@@ -58,6 +53,5 @@ namespace Crud_Application.CQRS.Commands
         {
             public long Id { get; set; }
         }
-
     }
 }

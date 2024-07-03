@@ -1,4 +1,4 @@
-using Crud_Application.CQRS.Commands;
+using Crud_Application_Contracts.CQRS.Commands;
 using Crud_Domain;
 using Crud_Infrastructure.Repository;
 using Crud_Opreation.Context;

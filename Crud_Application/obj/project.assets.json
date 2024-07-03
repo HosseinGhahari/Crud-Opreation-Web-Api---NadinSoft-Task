@@ -48,25 +48,9 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Crud_Application_Contracts/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "MediatR": "12.3.0"
-        },
-        "compile": {
-          "bin/placeholder/Crud_Application_Contracts.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Crud_Application_Contracts.dll": {}
-        }
-      },
       "Crud_Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Crud_Application_Contracts": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/Crud_Domain.dll": {}
         },
@@ -140,11 +124,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Crud_Application_Contracts/1.0.0": {
-      "type": "project",
-      "path": "../Crud_Application_Contracts/Crud_Application_Contracts.csproj",
-      "msbuildProject": "../Crud_Application_Contracts/Crud_Application_Contracts.csproj"
-    },
     "Crud_Domain/1.0.0": {
       "type": "project",
       "path": "../Crud_Domain/Crud_Domain.csproj",
@@ -153,8 +132,8 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Crud_Application_Contracts >= 1.0.0",
-      "Crud_Domain >= 1.0.0"
+      "Crud_Domain >= 1.0.0",
+      "MediatR >= 12.3.0"
     ]
   },
   "packageFolders": {
@@ -190,9 +169,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application_Contracts.csproj": {
-              "projectPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application_Contracts.csproj"
-            },
             "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Domain\\Crud_Domain.csproj": {
               "projectPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Domain\\Crud_Domain.csproj"
             }
@@ -208,6 +184,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "MediatR": {
+            "target": "Package",
+            "version": "[12.3.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

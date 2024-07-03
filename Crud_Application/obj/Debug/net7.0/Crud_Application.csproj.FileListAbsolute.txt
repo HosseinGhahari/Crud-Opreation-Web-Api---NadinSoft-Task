@@ -6,9 +6,7 @@ C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Application\obj\De
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Application\bin\Debug\net7.0\Crud_Application.deps.json
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Application\bin\Debug\net7.0\Crud_Application.dll
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Application\bin\Debug\net7.0\Crud_Application.pdb
-C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Application\bin\Debug\net7.0\Crud_Application_Contracts.dll
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Application\bin\Debug\net7.0\Crud_Domain.dll
-C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Application\bin\Debug\net7.0\Crud_Application_Contracts.pdb
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Application\bin\Debug\net7.0\Crud_Domain.pdb
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Application\obj\Debug\net7.0\Crud_Application.csproj.CopyComplete
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Application\obj\Debug\net7.0\Crud_Application.dll

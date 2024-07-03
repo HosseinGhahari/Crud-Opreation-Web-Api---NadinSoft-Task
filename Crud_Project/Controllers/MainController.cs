@@ -1,4 +1,4 @@
-﻿using Crud_Application.CQRS.Commands;
+﻿using Crud_Application_Contracts.CQRS.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
