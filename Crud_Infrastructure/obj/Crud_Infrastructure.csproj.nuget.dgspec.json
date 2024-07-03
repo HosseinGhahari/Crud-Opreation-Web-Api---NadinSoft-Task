@@ -4,12 +4,12 @@
     "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Infrastructure\\Crud_Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application_Contracts.csproj": {
+    "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application_Contracts.csproj",
-        "projectName": "Crud_Application_Contracts",
-        "projectPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application_Contracts.csproj",
+        "projectUniqueName": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application.csproj",
+        "projectName": "Crud_Application",
+        "projectPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application.csproj",
         "packagesPath": "C:\\Users\\Hossein Ghahari\\.nuget\\packages\\",
         "outputPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\obj\\",
         "projectStyle": "PackageReference",
@@ -32,7 +32,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Domain\\Crud_Domain.csproj": {
+                "projectPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Domain\\Crud_Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -44,6 +48,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -92,11 +102,7 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {
-              "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application_Contracts.csproj": {
-                "projectPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application_Contracts.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -157,8 +163,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application_Contracts.csproj": {
-                "projectPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application_Contracts.csproj"
+              "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application.csproj": {
+                "projectPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application.csproj"
               },
               "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Domain\\Crud_Domain.csproj": {
                 "projectPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Domain\\Crud_Domain.csproj"

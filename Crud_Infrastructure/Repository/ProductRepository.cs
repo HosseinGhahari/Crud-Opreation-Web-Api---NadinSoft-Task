@@ -1,5 +1,4 @@
-﻿using Crud_Application.Contracts.Product;
-using Crud_Domain;
+﻿using Crud_Domain;
 using Crud_Opreation.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,22 +17,12 @@ namespace Crud_Infrastructure.Repository
         // Checks for duplicate ManufactureEmail and ProduceDate.
         // Persists changes to the database using Save().
         // Throws an exception if the product already exists.
-        public void CreateProduct(AddProduct entity)
+        public async Task CreateProductAsync(Product entity)
         {
-            if (!Exist(entity.ManufactureEmail, entity.ProduceDate ))
+            if (!Exist(entity.ManufactureEmail, entity.ProduceDate))
             {
-                var addproduct = new Product()
-                {
-                    Name = entity.Name,
-                    ProduceDate = entity.ProduceDate,
-                    ManufactureEmail = entity.ManufactureEmail,
-                    ManufacturePhone = entity.ManufacturePhone,
-                    IsAvailable = entity.IsAvailable
-                };
-
-                _context.Add(addproduct);
-                
-                Save();
+                _context.Add(entity);
+                await SaveAsync();
             }
             else
             {
@@ -52,7 +41,7 @@ namespace Crud_Infrastructure.Repository
             {
                 product.IsAvailable = false;
             }
-            Save();
+            SaveAsync();
         }
 
         // Retrieves a product by its unique ID.
@@ -67,26 +56,16 @@ namespace Crud_Infrastructure.Repository
         // Selects relevant properties (Id, Name, ProduceDate,
         // ManufacturePhone, ManufactureEmail, IsAvailable).
         // Filters by IsAvailable == true and returns a list.
-        public List<ProductViewModel> GetProducts()
+        public List<Product> GetProducts()
         {
-            var query = _context.Products.Select(x => new ProductViewModel
-            {
-                Id = x.Id,
-                Name = x.Name,
-                ProduceDate = x.ProduceDate,
-                ManufacturePhone = x.ManufacturePhone,
-                ManufactureEmail = x.ManufactureEmail,
-                IsAvailable = x.IsAvailable,
-            });
-
-            return query.Where(x => x.IsAvailable == true).ToList();
+            return _context.Products.Where(x => x.IsAvailable == true).ToList();
         }
 
         //  It’s responsible for persisting changes
         //  made to the database context.
-        public void Save()
+        public async Task SaveAsync()
         {
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         // Checks if a product with the same email or date exists.
@@ -105,7 +84,7 @@ namespace Crud_Infrastructure.Repository
 
         // Updates a product if it exists, based on the provided entity.
         // Throws exceptions for non-existent products or duplicate email/date.
-        public void UpdateProduct(UpdateProduct entity)
+        public void UpdateProduct(Product entity)
         {
             var product = _context.Products.Find(entity.Id);
 
@@ -119,17 +98,8 @@ namespace Crud_Infrastructure.Repository
             }
             else
             {
-                var updateProduct = new Product()
-                {
-                    Id = entity.Id,
-                    Name = entity.Name,
-                    ProduceDate = entity.ProduceDate,
-                    ManufactureEmail = entity.ManufactureEmail,
-                    ManufacturePhone = entity.ManufacturePhone,
-                    IsAvailable = entity.IsAvailable
-                };
-                _context.Entry(updateProduct).State = EntityState.Modified;
-                Save();
+                _context.Entry(entity).State = EntityState.Modified;
+                SaveAsync();
             }
         }
     }

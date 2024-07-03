@@ -1,5 +1,4 @@
-using Crud_Application;
-using Crud_Application.Contracts.Product;
+using Crud_Application.CQRS.Commands;
 using Crud_Domain;
 using Crud_Infrastructure.Repository;
 using Crud_Opreation.Context;
@@ -15,12 +14,15 @@ builder.Services.AddSwaggerGen();
 // Registers IProductService with ProductService.
 // Enables dependency injection for ProductService.
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
-builder.Services.AddTransient<IProductService, ProductService>();
-
 
 // Configures the MainContext database connection using the DefaultConnection string.
 builder.Services.AddDbContext<MainContext>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+// This method call adds MediatR-related services to the DI container.
+// It allows you to use MediatR for handling commands and queries.
+builder.Services.AddMediatR(a => a.RegisterServicesFromAssembly(typeof(CreateProductCommand.Command).Assembly));
 
 
 var app = builder.Build();

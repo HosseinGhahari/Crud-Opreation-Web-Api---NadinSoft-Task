@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {
-      "Crud_Application_Contracts/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/Crud_Application_Contracts.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Crud_Application_Contracts.dll": {}
-        }
-      }
-    }
+    "net7.0": {}
   },
-  "libraries": {
-    "Crud_Application_Contracts/1.0.0": {
-      "type": "project",
-      "path": "../Crud_Application_Contracts/Crud_Application_Contracts.csproj",
-      "msbuildProject": "../Crud_Application_Contracts/Crud_Application_Contracts.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net7.0": [
-      "Crud_Application_Contracts >= 1.0.0"
-    ]
+    "net7.0": []
   },
   "packageFolders": {
     "C:\\Users\\Hossein Ghahari\\.nuget\\packages\\": {},
@@ -58,11 +39,7 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {
-            "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application_Contracts.csproj": {
-              "projectPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application_Contracts\\Crud_Application_Contracts.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

@@ -7,13 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Crud_Application\Crud_Application.csproj" />
-    <ProjectReference Include="..\Crud_Application_Contracts\Crud_Application_Contracts.csproj" />
+    <ProjectReference Include="..\Crud_Application_Contracts\Crud_Application.csproj" />
     <ProjectReference Include="..\Crud_Domain\Crud_Domain.csproj" />
     <ProjectReference Include="..\Crud_Infrastructure\Crud_Infrastructure.csproj" />
   </ItemGroup>

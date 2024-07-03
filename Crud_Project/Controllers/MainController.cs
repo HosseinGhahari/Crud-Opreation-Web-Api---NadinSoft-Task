@@ -1,22 +1,18 @@
-﻿using Crud_Application.Contracts.Product;
-using Crud_Domain;
+﻿using Crud_Application.CQRS.Commands;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Crud_Project.Controllers
 {
     public class MainController : Controller
     {
-        // here we injects an instance of IProductService
-        // and IProductRepository to interact with product data.
-        private readonly IProductService _productService;
-        private readonly IProductRepository _productRepository;
-        public MainController(IProductService productService , IProductRepository productRepository)
+        private readonly IMediator _mediator;
+        public MainController(IMediator mediator)
         {
-            _productService = productService;
-            _productRepository = productRepository;
+            _mediator = mediator;
         }
 
-        // HTTP GET endpoint for retrieving a list of products.
+     /*   // HTTP GET endpoint for retrieving a list of products.
         // Retrieve a list of products using the injected IProductService.
         // Return the products as an HTTP 200 (OK) response.
         [HttpGet]
@@ -41,7 +37,7 @@ namespace Crud_Project.Controllers
                 return NotFound();
             }
             return Ok(product);
-        }
+        }*/
 
         // HTTP POST endpoint for creating a new product.
         // Check if the input product is not null.
@@ -49,19 +45,24 @@ namespace Crud_Project.Controllers
         // This method adds the product to the database or another data store.
         [HttpPost]
         [Route("CreateProduct")]
-        public IActionResult CreateProduct(AddProduct product)
+        public async Task<IActionResult> CreateProduct(CreateProductCommand.Command command)
         {
-            if (product != null)
+            if (command == null)
             {
-                _productService.CreateProduct(product);
-                return Ok();
+                return BadRequest("Inputs Are Null");
+            }
+
+            var response = await _mediator.Send(command);
+
+            if (response != null)
+            {
+                return Ok(response);
             }
 
             return BadRequest("Inputs Are Null");
-
         }
 
-        // HTTP PUT endpoint for updating an existing product.
+      /*  // HTTP PUT endpoint for updating an existing product.
         // Call the UpdateProduct method from the injected IProductService.
         // This method updates the product data in the database or another data store.
         // Return an HTTP 200 (OK) response.
@@ -83,6 +84,6 @@ namespace Crud_Project.Controllers
         {
             _productService.DeleteProduct(id);
             return Ok();
-        }
+        }*/
     }
 }

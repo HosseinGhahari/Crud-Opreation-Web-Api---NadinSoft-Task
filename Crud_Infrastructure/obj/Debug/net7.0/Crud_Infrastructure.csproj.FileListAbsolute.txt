@@ -7,9 +7,7 @@ C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\bin
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\bin\Debug\net7.0\Crud_Infrastructure.runtimeconfig.json
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\bin\Debug\net7.0\Crud_Infrastructure.dll
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\bin\Debug\net7.0\Crud_Infrastructure.pdb
-C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\bin\Debug\net7.0\Crud_Application_Contracts.dll
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\bin\Debug\net7.0\Crud_Domain.dll
-C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\bin\Debug\net7.0\Crud_Application_Contracts.pdb
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\bin\Debug\net7.0\Crud_Domain.pdb
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\obj\Debug\net7.0\Crud_Infrastructure.csproj.CopyComplete
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\obj\Debug\net7.0\Crud_Infrastructure.dll
@@ -17,3 +15,5 @@ C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\obj
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\obj\Debug\net7.0\Crud_Infrastructure.pdb
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\obj\Debug\net7.0\Crud_Infrastructure.genruntimeconfig.cache
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\obj\Debug\net7.0\ref\Crud_Infrastructure.dll
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\bin\Debug\net7.0\Crud_Application.dll
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Infrastructure\bin\Debug\net7.0\Crud_Application.pdb

@@ -54,12 +54,8 @@ C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\Crud_Application.dll
-C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\Crud_Application_Contracts.dll
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\Crud_Domain.dll
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\Crud_Infrastructure.dll
-C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\Crud_Application.pdb
-C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\Crud_Application_Contracts.pdb
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\Crud_Domain.pdb
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\Crud_Infrastructure.pdb
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\obj\Debug\net7.0\staticwebassets\msbuild.Crud_Project.Microsoft.AspNetCore.StaticWebAssets.props
@@ -76,3 +72,9 @@ C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\obj\Debug\
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\obj\Debug\net7.0\Crud_Project.pdb
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\obj\Debug\net7.0\Crud_Project.genruntimeconfig.cache
 C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\obj\Debug\net7.0\ref\Crud_Project.dll
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\MediatR.dll
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\MediatR.Contracts.dll
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\obj\Debug\net7.0\Crud_Project.MvcApplicationPartsAssemblyInfo.cs
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\Crud_Application.dll
+C:\My Work\2- Programming\3- C# Learning\5- Task\Project\Crud_Project\bin\Debug\net7.0\Crud_Application.pdb

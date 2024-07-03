@@ -13,7 +13,19 @@
         public string ManufactureEmail { get; set; }
         public bool IsAvailable { get; set; }
 
-        public Product() { }
+        protected Product() { }
+
+        public static Product Create(string name, DateTime produceDate, int manufacturePhone, string manufactureEmail, bool isAvailable)
+        {
+            return new Product
+            {
+                Name = name,
+                ProduceDate = produceDate,
+                ManufacturePhone = manufacturePhone,
+                ManufactureEmail = manufactureEmail,
+                IsAvailable = isAvailable
+            };
+        }
         public Product(string name, DateTime producedate, int manufacturePhone, string manufactureEmail)
         {
             Name = name;

@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Crud_Application_Contracts\Crud_Application_Contracts.csproj" />
-  </ItemGroup>
-
 </Project>
