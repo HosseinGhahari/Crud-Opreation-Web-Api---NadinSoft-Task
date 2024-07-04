@@ -31,6 +31,7 @@ namespace Crud_Infrastructure.Repository
             }
         }
 
+
         // Deletes a product by setting its availability to false.
         // If the product exists (based on the provided ID),
         // it marks it as unavailable.Persists changes to
@@ -73,25 +74,26 @@ namespace Crud_Infrastructure.Repository
         }
 
 
-
-        // Checks if a product with the same email or date exists.
-        // If an ID is provided, always returns false (ignores the check).
+        // This asynchronous method checks if a product with a given
+        // email or date already exists in the database, excluding a
+        // specific product if an ID is provided. This is useful for
+        // preventing duplicate entries during product creation or update operations.
         public async Task<bool> ExistAsync(string email, DateTime date, long? id)
         {
             var query = _context.Products.AsQueryable();
 
             if (id.HasValue)
             {
-                return true;
+                query = query.Where(x => x.Id != id.Value);
             }
 
             return await query.AnyAsync(x => x.ManufactureEmail == email || x.ProduceDate == date);
         }
 
 
-
-        // Updates a product if it exists, based on the provided entity.
-        // Throws exceptions for non-existent products or duplicate email/date.
+        // This method updates a product in the database,
+        // ensuring the product exists and the email or date
+        // isn't duplicated. If these checks pass, it saves the changes.
         public async Task UpdateProductAsync(Product entity)
         {
             var product = _context.Products.FindAsync(entity.Id);
@@ -110,7 +112,5 @@ namespace Crud_Infrastructure.Repository
                 await SaveAsync();
             }
         }
-
-
     }
 }
