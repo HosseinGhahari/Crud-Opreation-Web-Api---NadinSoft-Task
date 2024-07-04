@@ -1,18 +1,20 @@
 ﻿
 namespace Crud_Domain
 {
+    // This interface defines the contract for interacting with
+    // a product repository. It includes methods for retrieving
+    // products, getting a product by ID, creating, updating,
+    // and deleting products, as well as checking if a product
+    // with a specific email and date exists. The `SaveAsync`
+    // method is used to persist changes to the underlying data store.
     public interface IProductRepository
     {
-        // IProductService defines the contract for interacting with product-related operations.
-        // It includes methods for retrieving products, creating, updating, and deleting products,
-        // checking product existence, and saving changes. Implementations of this interface
-        // provide the actual logic for these operations.
-        List<Product> GetProducts();
-        Product GetById(long id);
+        Task<List<Product>> GetProductsAsync();
+        Task<Product> GetByIdAsync(long id);
         Task CreateProductAsync(Product entity);
-        void UpdateProduct(Product entity);
-        void DeleteProduct(long id);
-        bool Exist(string email, DateTime date, long? id = null);
+        Task UpdateProductAsync(Product entity);
+        Task DeleteProductAsync(long id);
+        Task<bool> ExistAsync(string email, DateTime date, long? id = null);
         Task SaveAsync();
     }
 }

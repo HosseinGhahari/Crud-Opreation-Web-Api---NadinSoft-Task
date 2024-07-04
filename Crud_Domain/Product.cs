@@ -15,6 +15,12 @@
 
         protected Product() { }
 
+
+        // This static factory method, named `Create`, belongs to the
+        // `Product` model. It constructs and returns a new `Product`
+        // instance with the specified properties (name, production date
+        // , phone, email, and availability). The method encapsulates
+        // object creation logic, promoting readability and consistency in code.
         public static Product Create(string name, DateTime produceDate, int manufacturePhone, string manufactureEmail, bool isAvailable)
         {
             return new Product

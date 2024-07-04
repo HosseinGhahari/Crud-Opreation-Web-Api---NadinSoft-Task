@@ -1,4 +1,5 @@
-﻿using Crud_Application_Contracts.CQRS.Commands;
+﻿using Crud_Application.CQRS.Queries;
+using Crud_Application_Contracts.CQRS.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,17 +13,18 @@ namespace Crud_Project.Controllers
             _mediator = mediator;
         }
 
-     /*   // HTTP GET endpoint for retrieving a list of products.
+        // HTTP GET endpoint for retrieving a list of products.
         // Retrieve a list of products using the injected IProductService.
         // Return the products as an HTTP 200 (OK) response.
         [HttpGet]
         [Route("GetProducts")]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var products = _productService.GetProducts();
+            var products = await _mediator.Send(new GetProductsQuery.Query());
             return Ok(products);
         }
 
+/*
         // HTTP GET endpoint for retrieving a product by its ID.
         // Call the GetById method from the injected IProductService.
         // If the product is not found, return an HTTP 404 (Not Found) response.

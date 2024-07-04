@@ -2,20 +2,32 @@
 using MediatR;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Crud_Application_Contracts.CQRS.Commands
 {
+    // This code defines a CQRS command for creating a product.
+    // The `CreateProductCommand` class contains a `Command` with
+    // properties representing product details (name, production date,
+    // phone, email, and availability). The `Handler` processes the command,
+    // creates a new product, and saves it using the provided `IProductRepository`
+    // . The response includes the generated product ID.
     public class CreateProductCommand
     {
         public class Command : IRequest<Response>
         {
+            [Required]
             public string Name { get; set; }
+            [Required]
             public DateTime ProduceDate { get; set; }
+            [Required]
             public int ManufacturePhone { get; set; }
+            [Required]
             public string ManufactureEmail { get; set; }
+            [Required]
             public bool IsAvailable { get; set; }
         }
 
