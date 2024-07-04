@@ -9,11 +9,13 @@ namespace Crud_Project.Controllers
 {
     public class MainController : Controller
     {
+
         private readonly IMediator _mediator;
         public MainController(IMediator mediator)
         {
             _mediator = mediator;
         }
+
 
         // HTTP GET endpoint for retrieving a list of products.
         // Retrieve a list of products using the injected IProductService.
@@ -43,6 +45,7 @@ namespace Crud_Project.Controllers
             return Ok(product);
         }
 
+
         // HTTP POST endpoint for creating a new product.
         // Check if the input product is not null.
         // Call the CreateProduct method from the injected IProductService.
@@ -66,10 +69,12 @@ namespace Crud_Project.Controllers
             return BadRequest("Inputs Are Null");
         }
 
-        // HTTP PUT endpoint for updating an existing product.
-        // Call the UpdateProduct method from the injected IProductService.
-        // This method updates the product data in the database or another data store.
-        // Return an HTTP 200 (OK) response.
+
+        // This HTTP PUT method deletes a product with a given ID.
+        // It sends a DeleteProductCommand with the product ID to
+        // the Mediator, which handles the deletion process. The
+        // method then returns an HTTP 200 OK status, along with
+        // the response from the command handler.
         [HttpPut]
         [Route("UpdateProduct")]
         public async Task<IActionResult> UpdateProduct(UpdateProductCommand.Command command)
@@ -77,17 +82,18 @@ namespace Crud_Project.Controllers
             var response = await _mediator.Send(command);
             return Ok(response);
         }
+        
 
         // HTTP PUT endpoint for deleting a product by its ID.
         // Call the DeleteProduct method from the injected IProductService.
         // This method removes the product from the database or another data store.
         // Return an HTTP 200 (OK) response to indicate successful deletion.
-/*        [HttpPut]
+        [HttpPut]
         [Route("DeleteProduct")]
-        public IActionResult DeleteProduct(int id)
+        public async Task<IActionResult> DeleteProduct(int id)
         {
-            _productService.DeleteProduct(id);
-            return Ok();
-        }*/
+            var response = await _mediator.Send(new DeleteProductCommand.Command { Id = id });
+            return Ok(response);
+        }
     }
 }
