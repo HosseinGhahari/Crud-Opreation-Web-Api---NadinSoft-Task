@@ -4,13 +4,30 @@ using Crud_Infrastructure.Repository;
 using Crud_Opreation.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+// this code sets up Swagger to handle API key-based
+// authentication (OAuth2) and ensures that all API
+// endpoints require the “Authorization” header with the token.
+builder.Services.AddSwaggerGen(option =>
+{
+    option.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey
+    });
+
+    option.OperationFilter<SecurityRequirementsOperationFilter>();
+});
+
 
 // Registers IProductService with ProductService.
 // Enables dependency injection for ProductService.
@@ -20,8 +37,9 @@ builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddDbContext<MainContext>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(option =>
+// Configure Identity API endpoints, customize password requirements,
+// use Entity Framework for storing user data, and add default token providers.
+builder.Services.AddIdentityApiEndpoints<IdentityUser>(option =>
 {
     option.Password.RequiredLength = 5;
     option.Password.RequireNonAlphanumeric = false;
@@ -53,7 +71,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-/*app.MapIdentityApi();*/
+app.MapIdentityApi<IdentityUser>();
 
 app.UseHttpsRedirection();
 
