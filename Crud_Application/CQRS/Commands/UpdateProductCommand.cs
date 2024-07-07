@@ -9,6 +9,13 @@ using System.Threading.Tasks;
 
 namespace Crud_Application.CQRS.Commands
 {
+    // `UpdateProductCommand` is a CQRS command for updating
+    // product details. The `Command` class takes the product
+    // ID and new details. The `Handler` fetches the product by
+    // ID, updates its details if found, and saves the changes.
+    // If the product is not found, it returns an error message.
+    // The result of the operation, including a success flag and
+    // a message, is returned in the `Response` class.
     public class UpdateProductCommand
     {
         public class Command : IRequest<Response>

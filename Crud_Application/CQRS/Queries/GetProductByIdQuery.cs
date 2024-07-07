@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 
 namespace Crud_Application.CQRS.Queries
 {
+    // `GetProductByIdQuery` is a CQRS query for retrieving a
+    // product by its ID. The `Query` class takes the product ID.
+    // The `Handler` fetches the product by ID from the `IProductRepository`
+    // and returns it in the `Response` class. If the product is not found,
+    // the `Product` property in the `Response` will be null.
     public class GetProductByIdQuery
     {
         public class Query : IRequest<Response>

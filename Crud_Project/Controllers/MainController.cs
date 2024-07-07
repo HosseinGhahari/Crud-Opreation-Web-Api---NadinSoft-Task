@@ -9,7 +9,9 @@ namespace Crud_Project.Controllers
 {
     public class MainController : Controller
     {
-
+        // It takes an instance of IMediator as a parameter,
+        // which is used for handling commands and queries
+        // in the CQRS pattern.
         private readonly IMediator _mediator;
         public MainController(IMediator mediator)
         {

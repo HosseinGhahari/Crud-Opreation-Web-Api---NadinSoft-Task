@@ -2,6 +2,7 @@ using Crud_Application_Contracts.CQRS.Commands;
 using Crud_Domain;
 using Crud_Infrastructure.Repository;
 using Crud_Opreation.Context;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,16 @@ builder.Services.AddTransient<IProductRepository, ProductRepository>();
 // Configures the MainContext database connection using the DefaultConnection string.
 builder.Services.AddDbContext<MainContext>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(option =>
+{
+    option.Password.RequiredLength = 5;
+    option.Password.RequireNonAlphanumeric = false;
+    option.Password.RequireUppercase = false;
+    option.Password.RequireDigit = false;
+
+}).AddEntityFrameworkStores<MainContext>().AddDefaultTokenProviders();
 
 
 // This method call adds MediatR-related services to the DI container.
@@ -42,8 +53,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+/*app.MapIdentityApi();*/
+
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

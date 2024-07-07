@@ -22,7 +22,7 @@ namespace Crud_Infrastructure.Repository
         {
             if (!await ExistAsync(entity.ManufactureEmail, entity.ProduceDate , entity.Id))
             {
-                _context.AddAsync(entity);
+                await _context.AddAsync(entity);
                 await SaveAsync();
             }
             else

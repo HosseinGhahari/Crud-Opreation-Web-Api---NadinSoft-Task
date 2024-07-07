@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 
 namespace Crud_Application.CQRS.Commands
 {
+    // DeleteProductCommand` is a CQRS command for deleting products
+    // The `Command` class takes the product ID.The `Handler` fetches
+    // the product by ID and deletes it if found, otherwise returns an
+    // error message.The result of the operation is returned in the `Response` class.
+
     public class DeleteProductCommand
     {
         public class Command : IRequest<Response>
