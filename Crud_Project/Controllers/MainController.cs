@@ -5,6 +5,7 @@ using Crud_Domain;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Crud_Project.Controllers
 {
@@ -23,7 +24,7 @@ namespace Crud_Project.Controllers
         // HTTP GET endpoint for retrieving a list of products.
         // Retrieve a list of products using the injected IProductService.
         // Return the products as an HTTP 200 (OK) response.
-        [HttpGet,Authorize]
+        [HttpGet]
         [Route("GetProducts")]
         public async Task<IActionResult> Index()
         {
@@ -49,10 +50,10 @@ namespace Crud_Project.Controllers
         }
 
 
-        // HTTP POST endpoint for creating a new product.
-        // Check if the input product is not null.
-        // Call the CreateProduct method from the injected IProductService.
-        // This method adds the product to the database or another data store.
+        // Creates a new product. Validates input data and user
+        // authorization. Sends a CreateProductCommand to the Mediator.
+        // Returns an HTTP 200 OK status with the command response if
+        // successful; otherwise, returns a 400 Bad Request status.
         [HttpPost,Authorize]
         [Route("CreateProduct")]
         public async Task<IActionResult> CreateProduct(CreateProductCommand.Command command)
@@ -62,6 +63,13 @@ namespace Crud_Project.Controllers
                 return BadRequest("Inputs Are Null");
             }
 
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if(string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized();
+            }
+
+            command.UserId = userId;
             var response = await _mediator.Send(command);
 
             if (response != null)
@@ -73,29 +81,51 @@ namespace Crud_Project.Controllers
         }
 
 
-        // This HTTP PUT method deletes a product with a given ID.
-        // It sends a DeleteProductCommand with the product ID to
-        // the Mediator, which handles the deletion process. The
-        // method then returns an HTTP 200 OK status, along with
-        // the response from the command handler.
+        // This HTTP PUT method updates a product with a given ID.
+        // It sends an UpdateProductCommand containing the product details
+        // to the Mediator, which handles the update process. The method
+        // then checks whether the current user is the owner of the product.
+        // If not, it returns a 403 Forbidden status; otherwise, it returns
+        // an HTTP 200 OK status along with the response from the command handler.
         [HttpPut,Authorize]
         [Route("UpdateProduct")]
         public async Task<IActionResult> UpdateProduct(UpdateProductCommand.Command command)
         {
+            var product = await _mediator.Send(new GetProductByIdQuery.Query {Id = command.Id});
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            command.UserId = userId;
+
+            if(Convert.ToString(product.Product.UserId) != userId)
+            {
+                return Forbid();
+            }
+
             var response = await _mediator.Send(command);
             return Ok(response);
         }
-        
 
-        // HTTP PUT endpoint for deleting a product by its ID.
-        // Call the DeleteProduct method from the injected IProductService.
-        // This method removes the product from the database or another data store.
-        // Return an HTTP 200 (OK) response to indicate successful deletion.
+
+        // Deletes a product with a given ID. just like update
+        // opreation Validates ownership and sends a DeleteProductCommand
+        // to the Mediator Returns an HTTP 200 OK status with the command response.
         [HttpPut,Authorize]
         [Route("DeleteProduct")]
-        public async Task<IActionResult> DeleteProduct(int id)
+        public async Task<IActionResult> DeleteProduct(DeleteProductCommand.Command command, long id )
         {
-            var response = await _mediator.Send(new DeleteProductCommand.Command { Id = id });
+            if (command.Id != id)
+            {
+                return BadRequest("The product ID does not match.");
+            }
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            command.UserId = userId;
+            var product = await _mediator.Send(new GetProductByIdQuery.Query { Id = id });
+
+            if (Convert.ToString(product.Product.UserId) != userId)
+            {
+                return Forbid();
+            }
+
+            var response = await _mediator.Send(command);
             return Ok(response);
         }
     }

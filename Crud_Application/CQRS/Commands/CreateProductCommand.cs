@@ -4,7 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Crud_Application_Contracts.CQRS.Commands
@@ -29,6 +31,9 @@ namespace Crud_Application_Contracts.CQRS.Commands
             public string ManufactureEmail { get; set; }
             [Required]
             public bool IsAvailable { get; set; }
+            [NonSerialized]
+            public string UserId;
+
         }
 
 
@@ -47,7 +52,8 @@ namespace Crud_Application_Contracts.CQRS.Commands
                     request.ProduceDate,
                     request.ManufacturePhone,
                     request.ManufactureEmail,
-                    request.IsAvailable                 
+                    request.IsAvailable,
+                    request.UserId              
                 );
 
                 await _productRepository.CreateProductAsync(product);

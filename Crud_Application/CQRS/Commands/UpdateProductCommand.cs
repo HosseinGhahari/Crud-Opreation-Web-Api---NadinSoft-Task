@@ -32,6 +32,8 @@ namespace Crud_Application.CQRS.Commands
             public string ManufactureEmail { get; set; }
             [Required]
             public bool IsAvailable { get; set; }
+            [NonSerialized]
+            public string UserId;
         }
 
         public class Handler : IRequestHandler<Command, Response>
@@ -55,6 +57,7 @@ namespace Crud_Application.CQRS.Commands
                 product.ManufactureEmail = request.ManufactureEmail;
                 product.ProduceDate = request.ProduceDate;
                 product.IsAvailable = request.IsAvailable;
+                product.UserId = request.UserId;
 
                 try
                 {

@@ -20,6 +20,8 @@ namespace Crud_Application.CQRS.Commands
         {
             [Required]
             public long Id { get; set; }
+            [NonSerialized]
+            public string UserId;
         }
 
         public class Handler : IRequestHandler<Command, Response>
