@@ -1,4 +1,5 @@
 ﻿using Crud_Domain;
+using Crud_Domain.Models;
 using Crud_Opreation.Context;
 using Microsoft.EntityFrameworkCore;
 

@@ -1,4 +1,4 @@
-﻿namespace Crud_Domain
+﻿namespace Crud_Domain.Models
 {
     public class Product
     {
@@ -21,7 +21,7 @@
         // instance with the specified properties (name, production date
         // , phone, email, and availability). The method encapsulates
         // object creation logic, promoting readability and consistency in code.
-        public static Product Create(string name, DateTime produceDate, int manufacturePhone, string manufactureEmail, bool isAvailable , string userid)
+        public static Product Create(string name, DateTime produceDate, int manufacturePhone, string manufactureEmail, bool isAvailable, string userid)
         {
             return new Product
             {
@@ -33,7 +33,7 @@
                 UserId = userid
             };
         }
-        public Product(string name, DateTime producedate, int manufacturePhone, string manufactureEmail , string userid)
+        public Product(string name, DateTime producedate, int manufacturePhone, string manufactureEmail, string userid)
         {
             Name = name;
             ProduceDate = producedate;

@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2AB7B64D-015D-495D-A750-82C4CBD4262E}|..\\Crud_Application\\Crud_Application.csproj|c:\\my work\\2- programming\\3- c# learning\\5- task\\project\\crud_application\\cqrs\\commands\\updateproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AF71C886-DFAA-4A63-9BB6-2604F3F38314}|..\\Crud_Domain\\Crud_Domain.csproj|c:\\my work\\2- programming\\3- c# learning\\5- task\\project\\crud_domain\\models\\loginuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AB7B64D-015D-495D-A750-82C4CBD4262E}|..\\Crud_Application\\Crud_Application.csproj|c:\\my work\\2- programming\\3- c# learning\\5- task\\project\\crud_application\\cqrs\\commands\\deleteproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AF71C886-DFAA-4A63-9BB6-2604F3F38314}|..\\Crud_Domain\\Crud_Domain.csproj|c:\\my work\\2- programming\\3- c# learning\\5- task\\project\\crud_domain\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AB7B64D-015D-495D-A750-82C4CBD4262E}|..\\Crud_Application\\Crud_Application.csproj|c:\\my work\\2- programming\\3- c# learning\\5- task\\project\\crud_application\\cqrs\\commands\\createproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D794E767-E851-418A-A242-F61531033700}|Crud_Project.csproj|c:\\my work\\2- programming\\3- c# learning\\5- task\\project\\crud_project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D794E767-E851-418A-A242-F61531033700}|Crud_Project.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D794E767-E851-418A-A242-F61531033700}|Crud_Project.csproj|c:\\my work\\2- programming\\3- c# learning\\5- task\\project\\crud_project\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D794E767-E851-418A-A242-F61531033700}|Crud_Project.csproj|solutionrelative:controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AB7B64D-015D-495D-A750-82C4CBD4262E}|..\\Crud_Application\\Crud_Application.csproj|c:\\my work\\2- programming\\3- c# learning\\5- task\\project\\crud_application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AB7B64D-015D-495D-A750-82C4CBD4262E}|..\\Crud_Application\\Crud_Application.csproj|c:\\my work\\2- programming\\3- c# learning\\5- task\\project\\crud_application\\cqrs\\queries\\getproductbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AB7B64D-015D-495D-A750-82C4CBD4262E}|..\\Crud_Application\\Crud_Application.csproj|c:\\my work\\2- programming\\3- c# learning\\5- task\\project\\crud_application\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D794E767-E851-418A-A242-F61531033700}|Crud_Project.csproj|c:\\my work\\2- programming\\3- c# learning\\5- task\\project\\crud_project\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D794E767-E851-418A-A242-F61531033700}|Crud_Project.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,34 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdateProductCommand.cs",
-              "DocumentMoniker": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\CQRS\\Commands\\UpdateProductCommand.cs",
-              "RelativeDocumentMoniker": "..\\Crud_Application\\CQRS\\Commands\\UpdateProductCommand.cs",
-              "ToolTip": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\CQRS\\Commands\\UpdateProductCommand.cs",
-              "RelativeToolTip": "..\\Crud_Application\\CQRS\\Commands\\UpdateProductCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T09:32:29.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateProductCommand.cs",
-              "DocumentMoniker": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\CQRS\\Commands\\CreateProductCommand.cs",
-              "RelativeDocumentMoniker": "..\\Crud_Application\\CQRS\\Commands\\CreateProductCommand.cs",
-              "ToolTip": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\CQRS\\Commands\\CreateProductCommand.cs",
-              "RelativeToolTip": "..\\Crud_Application\\CQRS\\Commands\\CreateProductCommand.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAuwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T09:32:25.636Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
@@ -68,41 +46,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GetProductByIdQuery.cs",
-              "DocumentMoniker": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\CQRS\\Queries\\GetProductByIdQuery.cs",
-              "RelativeDocumentMoniker": "..\\Crud_Application\\CQRS\\Queries\\GetProductByIdQuery.cs",
-              "ToolTip": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\CQRS\\Queries\\GetProductByIdQuery.cs",
-              "RelativeToolTip": "..\\Crud_Application\\CQRS\\Queries\\GetProductByIdQuery.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Domain\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "..\\Crud_Domain\\Models\\Product.cs",
+              "ToolTip": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Domain\\Models\\Product.cs",
+              "RelativeToolTip": "..\\Crud_Domain\\Models\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T09:05:26.752Z",
+              "WhenOpened": "2024-07-19T12:04:55.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DeleteProductCommand.cs",
-              "DocumentMoniker": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\CQRS\\Commands\\DeleteProductCommand.cs",
-              "RelativeDocumentMoniker": "..\\Crud_Application\\CQRS\\Commands\\DeleteProductCommand.cs",
-              "ToolTip": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\CQRS\\Commands\\DeleteProductCommand.cs",
-              "RelativeToolTip": "..\\Crud_Application\\CQRS\\Commands\\DeleteProductCommand.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAIA1wBcAAAAhAAAA",
+              "DocumentIndex": 0,
+              "Title": "LoginUser.cs",
+              "DocumentMoniker": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Domain\\Models\\LoginUser.cs",
+              "RelativeDocumentMoniker": "..\\Crud_Domain\\Models\\LoginUser.cs",
+              "ToolTip": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Domain\\Models\\LoginUser.cs",
+              "RelativeToolTip": "..\\Crud_Domain\\Models\\LoginUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T08:59:17.283Z",
+              "WhenOpened": "2024-07-19T12:04:54.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Project\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Project\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-19T12:04:40.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "..\\Crud_Application\\Services\\IAuthService.cs",
+              "ToolTip": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\Services\\IAuthService.cs",
+              "RelativeToolTip": "..\\Crud_Application\\Services\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T12:00:55.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Project\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Project\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T13:46:35.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MainController.cs",
-              "DocumentMoniker": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Project\\Controllers\\MainController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MainController.cs",
-              "ToolTip": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Project\\Controllers\\MainController.cs",
-              "RelativeToolTip": "Controllers\\MainController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAA7AAAA",
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "..\\Crud_Application\\Services\\AuthService.cs",
+              "ToolTip": "C:\\My Work\\2- Programming\\3- C# Learning\\5- Task\\Project\\Crud_Application\\Services\\AuthService.cs",
+              "RelativeToolTip": "..\\Crud_Application\\Services\\AuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T14:21:57.867Z",
+              "WhenOpened": "2024-07-18T13:50:35.873Z",
               "EditorCaption": ""
             }
           ]

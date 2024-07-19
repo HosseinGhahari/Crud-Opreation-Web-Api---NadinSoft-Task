@@ -1,4 +1,4 @@
-﻿using Crud_Domain;
+﻿using Crud_Domain.Models;
 using Crud_Opreation.Mapping;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;

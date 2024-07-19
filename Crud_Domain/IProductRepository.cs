@@ -1,4 +1,6 @@
 ﻿
+using Crud_Domain.Models;
+
 namespace Crud_Domain
 {
     // This interface defines the contract for interacting with

@@ -1,4 +1,5 @@
 ﻿using Crud_Domain;
+using Crud_Domain.Models;
 using MediatR;
 using System;
 using System.Collections.Generic;
