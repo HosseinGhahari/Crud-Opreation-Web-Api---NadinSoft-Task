@@ -2,7 +2,7 @@
   
 <h1>ِWeb Api Crud Opreation - CQRS Pattern & Asp.Net Identity </h1>
 
-<p>✅ “Recently, I tackled a challenging task assigned by a hiring company. As a junior developer,<br> it wasn’t a walk in the park, but it pushed me to learn and grow significantly. The obstacles I faced during this <br> project ultimately helped me level up my skills.”</p>
+<p>✅ “Recently, I tackled a challenging task assigned by a hiring company. As a junior developer,<br> it wasn’t a walk in the park, but it pushed me to learn and grow significantly. The obstacles <br> I faced during this project ultimately helped me level up my skills.”</p>
 
 <p>✅ - Please Make Sure You Have Installed Sql Server On Your Machine 🖥</p>
 
